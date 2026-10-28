@@ -2,125 +2,117 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'self'">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'self'">
   <meta name="referrer" content="no-referrer">
-  <title>Barbados Future Fund</title>
+  <title>Child Wealth Fund</title>
+  <meta name="description" content="Every child born in Barbados since 30 November 2021 receives BDS $5,000, invested in trust until adulthood. See how the Fund performs and where every dollar is.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Mono:wght@400;600&family=Public+Sans:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-  <div class="demo-banner">Prototype / demo. Programme name, dates and rules are placeholders pending official confirmation.</div>
-
-  <header class="site">
+<body data-page="home">
+  <div class="proto">Concept prototype. Not an official Government of Barbados site. All figures are illustrative.</div>
+  <header class="site-head">
     <div class="wrap">
-      <a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span> Barbados Future Fund</a>
-      <nav class="main" aria-label="Main">
-        <a href="#how">How it works</a>
-        <a href="#eligibility">Eligibility</a>
-        <a href="#world">Around the world</a>
-        <a href="#faq">FAQ</a>
-        <a href="login.html">Log in</a>
+      <a class="brand" href="index.html" aria-label="Child Wealth Fund home">
+        <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 20 L13 14 L17 17 L23 9" fill="none" stroke="#f2b705" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Child Wealth Fund
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html" data-nav="home">Overview</a>
+        <a href="performance.html" data-nav="performance">Performance</a>
+        <a href="transparency.html" data-nav="transparency">Transparency</a>
+        <a href="contribute.html" data-nav="contribute">Contribute</a>
+        <a href="login.html" class="login" data-nav="login">Log in</a>
       </nav>
     </div>
   </header>
-
   <main>
     <section class="hero">
       <div class="wrap">
-        <h1>Every Bajan child starts life with <span class="amount">BDS $3,000</span> invested in their future.</h1>
-        <p>A government-funded savings account, held securely by a partner bank, that grows until your child turns 18. Along the way, kids can log in, watch their money grow and learn how saving and investing work.</p>
-        <div class="btn-row">
-          <a class="btn btn-gold" href="login.html">Log in to see an account</a>
-          <a class="btn btn-ghost" href="#how">How it works</a>
+        <p class="eyebrow">Barbados Republic Child Wealth Fund</p>
+        <h1>BDS $5,000 for every child, invested <em>in the open</em>.</h1>
+        <p class="lead">Every child born in Barbados since 30 November 2021 owns a share of this Fund. It is held in trust, invested for the long term, and reported here in full: what it earns, what it costs, and where every dollar is.</p>
+        <div class="cta">
+          <a class="btn btn-gold" href="performance.html">See performance</a>
+          <a class="btn btn-line" href="login.html">Log in to a child's account</a>
+        </div>
+        <div class="ledger" aria-label="Key figures">
+          <div><p class="k">Fund value</p><p class="v" data-fig="fundValue"></p><p class="src">Custodian statement</p></div>
+          <div><p class="k">Children enrolled</p><p class="v" data-fig="children"></p><p class="src">Registration Dept. birth register</p></div>
+          <div><p class="k">Return since <span data-fig="inceptionShort"></span></p><p class="v" data-fig="since"></p><p class="src" data-fig="sinceBench"></p></div>
+          <div><p class="k">Total annual cost</p><p class="v" data-fig="cost"></p><p class="src">All fees, incl. inside funds</p></div>
         </div>
       </div>
     </section>
 
-    <section id="how">
-      <div class="wrap">
-        <h2>How it works</h2>
-        <p class="lead">Simple, automatic and locked away until it matters.</p>
-        <div class="grid">
-          <div class="card"><span class="step-no">1</span><h3>Birth registered</h3><p>When a qualifying birth is registered, an account is opened automatically in the child's name. No forms, no fees.</p></div>
-          <div class="card"><span class="step-no">2</span><h3>BDS $3,000 deposited</h3><p>The Government deposits the starting amount. Families may be able to add more (to be confirmed).</p></div>
-          <div class="card"><span class="step-no">3</span><h3>Invested for growth</h3><p>The money is invested in a diversified, low-cost fund that becomes more cautious as the child nears 18.</p></div>
-          <div class="card"><span class="step-no">4</span><h3>Unlocked at 18</h3><p>From 18, the young adult can withdraw for approved purposes such as education, training, a first home or starting a business.</p></div>
+    <section class="block">
+      <div class="wrap two">
+        <div class="panel">
+          <h3>Growth of BDS $100 since launch</h3>
+          <p class="src">Fund after all fees vs benchmark (70% global shares, 30% global bonds)</p>
+          <div class="chart" id="growth-chart"></div>
+          <div class="legend"><span><i></i>Fund</span><span><i class="b"></i>Benchmark</span></div>
+        </div>
+        <div class="panel">
+          <h3>The honest number</h3>
+          <p>The Fund is <strong data-fig="gapWords"></strong> its benchmark since launch. Money set aside for private equity and infrastructure is still waiting to be invested, and cash earns less than shares. We show this rather than hide it.</p>
+          <p>The test that matters: over 10 years, does the Fund beat a simple index portfolio after fees? If not, the riskier parts shrink.</p>
+          <p><a href="performance.html">Full performance report</a></p>
         </div>
       </div>
     </section>
 
-    <section id="eligibility" class="alt">
+    <section class="block alt">
       <div class="wrap">
-        <h2>Who is eligible?</h2>
-        <p class="lead">Placeholder rules, to be replaced with the official criteria.</p>
-        <div class="grid">
-          <div class="card"><h3>Born on or after [DATE]</h3><p>Children born in Barbados (or to Barbadian citizens) on or after the programme start date.</p></div>
-          <div class="card"><h3>Registered birth</h3><p>Eligibility is confirmed through the Registration Department. No application needed.</p></div>
-          <div class="card"><h3>Approved withdrawals</h3><p>Education, vocational training, first home deposit, business start-up, or other purposes set out in law.</p></div>
+        <div class="sec-head">
+          <p class="kicker">How it works</p>
+          <h2>Automatic at birth. Locked until adulthood.</h2>
         </div>
+        <ol class="steps">
+          <li><h3>Birth registered</h3><p>Every eligible child is enrolled automatically from the birth register. No forms, no bank account to open.</p></li>
+          <li><h3>BDS $5,000 credited</h3><p>The child's share of the Fund is recorded by an independent administrator. Family and friends can add to it.</p></li>
+          <li><h3>Invested for growth</h3><p>75% in low-cost global index funds, up to 25% in infrastructure, property and private equity, including the Caribbean and Africa.</p></li>
+          <li><h3>Claimed as a young adult</h3><p>Between 18 and 25 (age to be confirmed), paid into the young person's own bank or credit union account for education, a home or a business.</p></li>
+        </ol>
       </div>
     </section>
 
-    <section id="ages">
+    <section class="block">
       <div class="wrap">
-        <h2>Grows with your child</h2>
-        <p class="lead">Each login shows content written for the child's age.</p>
-        <div class="grid">
-          <div class="card"><h3>0–5 · Parents &amp; guardians</h3><p>Guardian-only view: balance, statements, contact details.</p></div>
-          <div class="card"><h3>6–10 · Seedlings</h3><p>Pictures, a growing tree, and simple ideas: saving, waiting, needs vs wants.</p></div>
-          <div class="card"><h3>11–15 · Growers</h3><p>Real numbers, interest, compound growth and what "investing" means.</p></div>
-          <div class="card"><h3>16–19 · Navigators</h3><p>Asset classes, risk, fees, budgeting and planning what to do at 18.</p></div>
+        <div class="sec-head">
+          <p class="kicker">Where the money is</p>
+          <h2>No single institution controls the money.</h2>
+          <p>The money is split across independent bodies, each checking the others. No bank, minister or manager can move it alone.</p>
         </div>
+        <div class="flow">
+          <div class="node"><b>Government of Barbados</b><span>Pays BDS $5,000 per child. Sets the mandate, not the investments.</span></div>
+          <div class="node key"><b>Child Wealth Fund trust</b><span>Owns the assets on behalf of every child. Run by independent trustees.</span></div>
+          <div class="node"><b>Independent custodian</b><span>Holds the shares, bonds and fund interests in safekeeping.</span></div>
+          <div class="node"><b>Fund administrator</b><span>Keeps each child's record. Feeds this website.</span></div>
+          <div class="node"><b>External auditor</b><span>Checks the accounts and valuations every year.</span></div>
+        </div>
+        <p class="note">This website only shows information. It cannot move money. Claims are paid only into an account in the young person's own name.</p>
       </div>
     </section>
 
-    <section id="world" class="alt">
-      <div class="wrap">
-        <h2>Learning from around the world</h2>
-        <p class="lead">Similar child-savings programmes already exist. Here's what Barbados can borrow, and what to avoid.</p>
-        <div class="table-scroll">
-        <table class="compare">
-          <thead><tr><th>Country / programme</th><th>Seed money</th><th>What works</th><th>Lesson</th></tr></thead>
-          <tbody>
-            <tr><td>UK – Child Trust Fund (2005–2011)</td><td>£250–£500</td><td>Accounts opened automatically; investments de-risk as the child nears 18.</td><td>Over a million accounts were left unclaimed at 18. Contact details and reminders matter.</td></tr>
-            <tr><td>Singapore – Child Development Account</td><td>Govt grant plus matched savings</td><td>Opened automatically at birth; government matches family savings.</td><td>Matching encourages families to keep saving.</td></tr>
-            <tr><td>Connecticut, USA – Baby Bonds</td><td>US$3,200</td><td>Held in a state-managed trust; claimable 18–30 for home, education, business.</td><td>A wide claim window and set purposes protect the money.</td></tr>
-            <tr><td>USA – "Trump Accounts" (2025–2028 births)</td><td>US$1,000</td><td>Invested in low-cost US index funds; family top-ups allowed.</td><td>Families have to opt in, which leaves some children out. Make it automatic.</td></tr>
-            <tr><td>Hungary – Baby Bond</td><td>Govt bond at birth</td><td>Simple and universal, locked until 18.</td><td>Low returns without real investment growth.</td></tr>
-            <tr><td>Israel – Savings for Every Child</td><td>Monthly govt deposit</td><td>Parents choose a risk level; financial-education push.</td><td>Default fund choice matters most, since most parents never change it.</td></tr>
-          </tbody>
-        </table>
-        </div>
-      </div>
-    </section>
-
-    <section id="security">
-      <div class="wrap">
-        <h2>Security first</h2>
-        <p class="lead">This is children's money and children's data. The live service is designed so that:</p>
-        <div class="grid">
-          <div class="card"><h3>The bank holds the money</h3><p>This site only <em>displays</em> balances. No payments or withdrawals can be made from here.</p></div>
-          <div class="card"><h3>Strong sign-in</h3><p>Guardians verify with national ID and two-factor authentication. Children get read-only logins created by their guardian.</p></div>
-          <div class="card"><h3>Minimal data</h3><p>No addresses or ID numbers are shown to children. Compliant with the Barbados Data Protection Act 2019.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq" class="alt">
-      <div class="wrap">
-        <h2>Questions</h2>
-        <details><summary>Can parents withdraw the money?</summary><p>No. The money belongs to the child and is locked until 18, apart from exceptional cases set out in law (e.g. terminal illness).</p></details>
-        <details><summary>What if my child is born overseas?</summary><p>To be confirmed in the official rules.</p></details>
-        <details><summary>Can the investment lose value?</summary><p>Investments can go down as well as up in the short term. Over 18 years a diversified fund has historically grown, and the fund becomes more cautious as your child approaches 18.</p></details>
-        <details><summary>What happens if nobody claims it at 18?</summary><p>The money stays invested in the young person's name, and reminders are sent until it is claimed.</p></details>
+    <section class="block alt">
+      <div class="wrap grid">
+        <div class="panel"><h3>For children, 6 to 19</h3><p>Their own read-only login, with lessons written for their age: a growing money tree for the youngest, real asset classes and fees for teenagers.</p></div>
+        <div class="panel"><h3>For families and friends</h3><p>Add to a child's account, with a proposed tax deduction. Gifts belong to the child and are locked with the grant.</p><p><a href="contribute.html">Contribute</a></p></div>
+        <div class="panel"><h3>For everyone</h3><p>Every holding, fee, limit and committee member is published. If a rule is broken, it is reported here.</p><p><a href="transparency.html">Transparency centre</a></p></div>
       </div>
     </section>
   </main>
-
-  <footer class="site">
+  <footer class="site-foot">
     <div class="wrap">
-      <p>Barbados Future Fund (working name), a prototype. Not an official Government of Barbados website.</p>
+      <p>Child Wealth Fund, a concept prototype for the Barbados Republic Child Wealth Fund. Figures are simulated to show how the live site would report.</p>
+      <p>Data as at <span data-fig="asOf"></span>. In the live service, figures come from the custodian and fund administrator and are audited yearly.</p>
     </div>
   </footer>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,56 @@
+  <main>
+    <section class="block">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="kicker">Contribute</p>
+          <h2>Add to a child's future</h2>
+          <p>Give to a named child, or to the Solidarity Pool, which tops up the accounts of children in hardship. Every gift is invested with the Fund and locked until the child is an adult.</p>
+        </div>
+        <div class="two">
+          <form class="panel form" id="give-form" novalidate>
+            <fieldset class="choice" aria-label="Where should the gift go?">
+              <label><input type="radio" name="route" value="child" id="route-child" checked> <b>A named child</b><br><span class="src">Parents, relatives, friends, diaspora</span></label>
+              <label><input type="radio" name="route" value="pool" id="route-pool"> <b>Solidarity Pool</b><br><span class="src">Shared equally among children in hardship</span></label>
+            </fieldset>
+            <div id="child-ref-wrap">
+              <label for="child-ref">Child's gift reference</label>
+              <input id="child-ref" name="childRef" placeholder="e.g. CWF-7Q4-K2M" autocomplete="off">
+              <p class="src">Ask the child's parent or guardian. You will never see the child's balance or personal details.</p>
+            </div>
+            <div>
+              <label for="amount">Amount (BDS $)</label>
+              <input id="amount" name="amount" type="number" min="10" step="10" value="250" inputmode="numeric">
+            </div>
+            <div>
+              <label for="years">If invested until the child is 18, in how many years?</label>
+              <select id="years" name="years">
+                <option value="18">18 years</option>
+                <option value="14" selected>14 years</option>
+                <option value="10">10 years</option>
+                <option value="5">5 years</option>
+              </select>
+            </div>
+            <p class="result" id="give-result" aria-live="polite"></p>
+            <button class="btn btn-ink" type="submit">Continue to payment</button>
+            <p class="src" id="give-msg" aria-live="polite"></p>
+          </form>
+          <div class="panel">
+            <h3>Rules for gifts (proposed)</h3>
+            <div class="tbl-wrap">
+              <table class="data">
+                <tbody>
+                  <tr><td>Tax deduction, named child</td><td class="r">Up to BDS $2,500 a year per child, max $5,000 a year in total</td></tr>
+                  <tr><td>Tax deduction, Solidarity Pool</td><td class="r">Fully deductible, up to a cap set by the Barbados Revenue Authority</td></tr>
+                  <tr><td>Government match</td><td class="r">None</td></tr>
+                  <tr><td>Can the gift be taken back?</td><td class="r">No. It belongs to the child</td></tr>
+                  <tr><td>Payment methods</td><td class="r">Bank transfer, card, regulated remittance. No cash</td></tr>
+                  <tr><td>Large gifts</td><td class="r">Over BDS $10,000 a year to one child: source-of-funds check</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="note">Tax deductions mostly help families who already save. The Solidarity Pool is how the Fund narrows the gap between children instead of widening it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>

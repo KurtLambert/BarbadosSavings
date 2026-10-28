@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'self'">
+  <meta name="referrer" content="no-referrer">
+  <title>Contribute · Child Wealth Fund</title>
+  <meta name="description" content="Every child born in Barbados since 30 November 2021 receives BDS $5,000, invested in trust until adulthood. See how the Fund performs and where every dollar is.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Mono:wght@400;600&family=Public+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="contribute">
+  <div class="proto">Concept prototype. Not an official Government of Barbados site. All figures are illustrative.</div>
+  <header class="site-head">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Child Wealth Fund home">
+        <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 20 L13 14 L17 17 L23 9" fill="none" stroke="#f2b705" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Child Wealth Fund
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html" data-nav="home">Overview</a>
+        <a href="performance.html" data-nav="performance">Performance</a>
+        <a href="transparency.html" data-nav="transparency">Transparency</a>
+        <a href="contribute.html" data-nav="contribute">Contribute</a>
+        <a href="login.html" class="login" data-nav="login">Log in</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="block">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="kicker">Contribute</p>
+          <h2>Add to a child's future</h2>
+          <p>Give to a named child, or to the Solidarity Pool, which tops up the accounts of children in hardship. Every gift is invested with the Fund and locked until the child is an adult.</p>
+        </div>
+        <div class="two">
+          <form class="panel form" id="give-form" novalidate>
+            <fieldset class="choice" aria-label="Where should the gift go?">
+              <label><input type="radio" name="route" value="child" id="route-child" checked> <b>A named child</b><br><span class="src">Parents, relatives, friends, diaspora</span></label>
+              <label><input type="radio" name="route" value="pool" id="route-pool"> <b>Solidarity Pool</b><br><span class="src">Shared equally among children in hardship</span></label>
+            </fieldset>
+            <div id="child-ref-wrap">
+              <label for="child-ref">Child's gift reference</label>
+              <input id="child-ref" name="childRef" placeholder="e.g. CWF-7Q4-K2M" autocomplete="off">
+              <p class="src">Ask the child's parent or guardian. You will never see the child's balance or personal details.</p>
+            </div>
+            <div>
+              <label for="amount">Amount (BDS $)</label>
+              <input id="amount" name="amount" type="number" min="10" step="10" value="250" inputmode="numeric">
+            </div>
+            <div>
+              <label for="years">If invested until the child is 18, in how many years?</label>
+              <select id="years" name="years">
+                <option value="18">18 years</option>
+                <option value="14" selected>14 years</option>
+                <option value="10">10 years</option>
+                <option value="5">5 years</option>
+              </select>
+            </div>
+            <p class="result" id="give-result" aria-live="polite"></p>
+            <button class="btn btn-ink" type="submit">Continue to payment</button>
+            <p class="src" id="give-msg" aria-live="polite"></p>
+          </form>
+          <div class="panel">
+            <h3>Rules for gifts (proposed)</h3>
+            <div class="tbl-wrap">
+              <table class="data">
+                <tbody>
+                  <tr><td>Tax deduction, named child</td><td class="r">Up to BDS $2,500 a year per child, max $5,000 a year in total</td></tr>
+                  <tr><td>Tax deduction, Solidarity Pool</td><td class="r">Fully deductible, up to a cap set by the Barbados Revenue Authority</td></tr>
+                  <tr><td>Government match</td><td class="r">None</td></tr>
+                  <tr><td>Can the gift be taken back?</td><td class="r">No. It belongs to the child</td></tr>
+                  <tr><td>Payment methods</td><td class="r">Bank transfer, card, regulated remittance. No cash</td></tr>
+                  <tr><td>Large gifts</td><td class="r">Over BDS $10,000 a year to one child: source-of-funds check</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="note">Tax deductions mostly help families who already save. The Solidarity Pool is how the Fund narrows the gap between children instead of widening it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-foot">
+    <div class="wrap">
+      <p>Child Wealth Fund, a concept prototype for the Barbados Republic Child Wealth Fund. Figures are simulated to show how the live site would report.</p>
+      <p>Data as at <span data-fig="asOf"></span>. In the live service, figures come from the custodian and fund administrator and are audited yearly.</p>
+    </div>
+  </footer>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -2,52 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'self'">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'self'">
   <meta name="referrer" content="no-referrer">
-  <title>My account · Barbados Future Fund</title>
+  <title>My account · Child Wealth Fund</title>
+  <meta name="description" content="Every child born in Barbados since 30 November 2021 receives BDS $5,000, invested in trust until adulthood. See how the Fund performs and where every dollar is.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Mono:wght@400;600&family=Public+Sans:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-  <div class="demo-banner">Demo account. Simulated figures, not financial advice.</div>
-  <header class="site">
+<body data-page="dashboard">
+  <div class="proto">Concept prototype. Not an official Government of Barbados site. All figures are illustrative.</div>
+  <header class="site-head">
     <div class="wrap">
-      <a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span> Barbados Future Fund</a>
-      <nav class="main" aria-label="Account">
-        <a href="#learn">Learn</a>
-        <a href="login.html" id="logout">Log out</a>
+      <a class="brand" href="index.html" aria-label="Child Wealth Fund home">
+        <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 20 L13 14 L17 17 L23 9" fill="none" stroke="#f2b705" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Child Wealth Fund
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html" data-nav="home">Overview</a>
+        <a href="performance.html" data-nav="performance">Performance</a>
+        <a href="transparency.html" data-nav="transparency">Transparency</a>
+        <a href="contribute.html" data-nav="contribute">Contribute</a>
+        <a href="login.html" class="login" data-nav="login">Log in</a>
       </nav>
     </div>
   </header>
-
   <main class="wrap" id="dashboard">
     <div class="dash-head">
-      <div>
-        <span class="pill" id="band-label"></span>
-        <h1 id="greeting" class="greeting"></h1>
-        <p class="lead" id="intro"></p>
-      </div>
+      <span class="pill" id="band-label"></span>
+      <h2 id="greeting"></h2>
+      <p class="src" id="intro"></p>
     </div>
-
     <div class="stats" id="stats"></div>
-
-    <div class="two-col">
-      <div class="card">
+    <div class="two">
+      <div class="panel">
         <h3 id="chart-title">How your money has grown</h3>
-        <div id="chart"></div>
-        <p class="note" id="chart-note"></p>
+        <div class="chart" id="child-chart"></div>
+        <p class="src" id="chart-note"></p>
       </div>
-      <div class="card">
+      <div class="panel">
         <h3 id="alloc-title">What it's invested in</h3>
-        <div id="alloc"></div>
+        <div id="child-alloc"></div>
       </div>
     </div>
-
-    <section id="learn" class="learn">
-      <h2 id="learn-title">Learn</h2>
+    <section class="block">
+      <div class="sec-head"><h2 id="learn-title">Learn</h2></div>
       <div class="grid" id="lessons"></div>
     </section>
   </main>
+  <footer class="site-foot">
+    <div class="wrap">
+      <p>Child Wealth Fund, a concept prototype for the Barbados Republic Child Wealth Fund. Figures are simulated to show how the live site would report.</p>
+      <p>Data as at <span data-fig="asOf"></span>. In the live service, figures come from the custodian and fund administrator and are audited yearly.</p>
+    </div>
+  </footer>
+  <script src="js/data.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
