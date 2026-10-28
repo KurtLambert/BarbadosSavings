@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'self'">
+  <meta name="referrer" content="no-referrer">
+  <title>My account · Barbados Future Fund</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="demo-banner">Demo account. Simulated figures, not financial advice.</div>
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="index.html"><span class="mark" aria-hidden="true"></span> Barbados Future Fund</a>
+      <nav class="main" aria-label="Account">
+        <a href="#learn">Learn</a>
+        <a href="login.html" id="logout">Log out</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap" id="dashboard">
+    <div class="dash-head">
+      <div>
+        <span class="pill" id="band-label"></span>
+        <h1 id="greeting" class="greeting"></h1>
+        <p class="lead" id="intro"></p>
+      </div>
+    </div>
+
+    <div class="stats" id="stats"></div>
+
+    <div class="two-col">
+      <div class="card">
+        <h3 id="chart-title">How your money has grown</h3>
+        <div id="chart"></div>
+        <p class="note" id="chart-note"></p>
+      </div>
+      <div class="card">
+        <h3 id="alloc-title">What it's invested in</h3>
+        <div id="alloc"></div>
+      </div>
+    </div>
+
+    <section id="learn" class="learn">
+      <h2 id="learn-title">Learn</h2>
+      <div class="grid" id="lessons"></div>
+    </section>
+  </main>
+  <script src="js/app.js"></script>
+</body>
+</html>
