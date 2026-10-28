@@ -4,7 +4,8 @@
   "use strict";
 
   var D = window.CWF;
-  var page = document.body.getAttribute("data-page");
+  var meta = document.querySelector('meta[name="claude:page"]');
+  var page = document.body.getAttribute("data-page") || (meta && meta.getAttribute("content"));
   var SESSION_KEY = "cwf-demo-profile";
 
   // ---------- helpers ----------
