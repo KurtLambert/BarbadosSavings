@@ -244,7 +244,8 @@
       lessons: [
         { t: "Keep your details up to date", b: "In the UK, over a million child accounts went unclaimed because families moved. Update your contact details whenever they change." },
         { t: "Family and friends can give", b: "Share your child's gift reference. Gifts are invested and locked, and you never have to share the balance." },
-        { t: "Talk about money early", b: "Children form money habits young. Simple talks about saving and waiting make a difference." }
+        { t: "Talk about money early", b: "Children form money habits young. Simple talks about saving and waiting make a difference." },
+        { t: "Summer camps from age 6", b: "Free camps on civics, discipline and money open to every enrolled child from age 6. Sign-up opens each May." }
       ]
     },
     seedling: {

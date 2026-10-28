@@ -9,6 +9,7 @@ PAGES = {
     "performance": "Performance · Child Wealth Fund",
     "transparency": "Transparency · Child Wealth Fund",
     "contribute": "Contribute · Child Wealth Fund",
+    "programmes": "Programmes · Child Wealth Fund",
     "login": "Log in · Child Wealth Fund",
     "dashboard": "My account · Child Wealth Fund",
 }

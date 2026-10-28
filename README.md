@@ -10,6 +10,7 @@ Prototype website for the Barbados Republic Child Wealth Fund: BDS $5,000 for ev
 - `performance.html`: growth vs benchmark, monthly returns, core/satellite allocation, costs
 - `transparency.html`: policy limits, holdings, governance, documents, FAQ
 - `contribute.html`: gifts to a named child or the Solidarity Pool (demo, no payment)
+- `programmes.html`: yearly communication calendar and summer camps (civics, discipline, finance)
 - `login.html`, `dashboard.html`: age-banded child accounts (parent 0-5, 6-10, 11-15, 16-19)
 
 ## Edit and build

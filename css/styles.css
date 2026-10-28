@@ -161,7 +161,7 @@ section.alt .track { background: var(--surface); border: 1px solid var(--line); 
 .flow .node span { color: var(--muted); font-size: .9rem; }
 
 /* Callout */
-.note { border-left: 3px solid var(--gold); padding: 10px 14px; background: var(--surface); color: var(--ink); font-size: .95rem; border-radius: 0 6px 6px 0; }
+.note { margin-top: 20px; border-left: 3px solid var(--gold); padding: 10px 14px; background: var(--surface); color: var(--ink); font-size: .95rem; border-radius: 0 6px 6px 0; }
 section.alt .note { background: var(--paper); }
 
 /* Forms */
