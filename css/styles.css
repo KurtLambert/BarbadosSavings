@@ -205,3 +205,8 @@ body.band-seedling .lesson p { font-size: 1.08rem; }
 .tree-leaf { fill: var(--good); }
 .tree-leaf.light { fill-opacity: .75; }
 .tree-sun { fill: var(--gold); }
+
+/* Ledger on a light section */
+.ledger-light { border-top: 2px solid var(--ink); margin: 0 0 28px; }
+.ledger-light .k, .ledger-light .src { color: var(--muted); }
+.ledger-light .v { color: var(--ink); }

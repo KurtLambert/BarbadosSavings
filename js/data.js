@@ -8,6 +8,7 @@ window.CWF = {
   startChildren: 10400,
   birthsPerMonth: 190,
   costPct: 0.38,           // estimated total annual cost, % of assets
+  opsBudget: 1.0e6,        // core team and office, BDS a year, paid from a separate government budget line
   // Monthly returns, %: Fund vs total-fund benchmark (70% MSCI ACWI IMI / 30% Bloomberg Global Aggregate)
   months: [
     { m: "Apr", fund: 1.2,  bench: 1.4 },

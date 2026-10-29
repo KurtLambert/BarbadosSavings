@@ -55,7 +55,9 @@
     sinceBench: "Benchmark " + pct(sinceBench) + ", after all fees",
     cost: D.costPct.toFixed(2) + "%",
     gapWords: (gap < 0 ? Math.abs(gap).toFixed(1) + " points behind" : gap.toFixed(1) + " points ahead of"),
-    breaches: String(breaches)
+    breaches: String(breaches),
+    opsBudget: millions(D.opsBudget),
+    costPerChild: "BDS $" + Math.round(D.opsBudget / children)
   };
   Array.prototype.forEach.call(document.querySelectorAll("[data-fig]"), function (n) {
     var v = FIGS[n.getAttribute("data-fig")];
